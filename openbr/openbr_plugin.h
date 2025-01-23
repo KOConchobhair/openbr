@@ -37,6 +37,7 @@
 #include <QStringList>
 #include <QThread>
 #include <QTime>
+#include <QElapsedTimer>
 #include <QVariant>
 #include <QVector>
 #include <opencv2/core.hpp>
@@ -526,7 +527,7 @@ public:
     BR_PROPERTY(QList<QString>, modelSearch, QList<QString>() )
 
     QHash<QString,QString> abbreviations;
-    QTime startTime;
+    QElapsedTimer startTime;
 
     bool contains(const QString &name);
     void printStatus();
